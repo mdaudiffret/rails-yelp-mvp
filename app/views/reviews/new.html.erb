@@ -1,0 +1,10 @@
+<div>
+  <h1>Add a new review to <%= @restaurant.name %></h1>
+  <%= link_to "Back to restaurant page", restaurant_path(@restaurant), class: "btn btn-secondary" %>
+</div>
+<br>
+<%= simple_form_for [@restaurant, @review] do |f| %>
+  <%= f.input :content %>
+  <%= f.input :rating, as: :radio_buttons, collection: (1..5)%>
+  <%= f.submit class: "btn btn-primary"%>
+<% end %>

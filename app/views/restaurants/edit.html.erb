@@ -1,0 +1,6 @@
+<div>
+  <h1>Edit <%= @restaurant.name %> </h1>
+  <%= link_to "Back to restaurant list", restaurants_path, class: "btn btn-secondary" %>
+</div>
+<br>
+<%= render "form", restaurant: @restaurant %>
